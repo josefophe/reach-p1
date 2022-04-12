@@ -1,0 +1,16 @@
+@import './theme.scss';
+
+.modal {
+  overflow: auto;
+}
+
+.modal_header {
+  color: $black;
+  text-align: center;
+}
+
+.modal_text {
+  color: $black;
+  margin: 2rem;
+  
+}

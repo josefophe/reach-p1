@@ -3,19 +3,21 @@
 const Player = {
   getHand: Fun([], UInt),
   seeOutcome: Fun([UInt], Null),
+
 };
 
 export const main = Reach.App(() => {
-  const Alice = Participant('Alice', {
-    ...Player,
-  });
-  const Bob   = Participant('Bob', {
-    ...Player,
-  });
-  const Rex = Participant('Rex', {
-    ...Player,
-  });
-  init();
+const Alice =
+      { ...Player,
+        wager: UInt };
+const Bob =
+      { ...Player,
+        acceptWager: Fun([UInt], Null) };
+
+// const Rex = Participant('Rex', {
+//    ...Player,
+//  });
+//  init();
 
   Alice.only(() => {
     const handAlice = declassify(interact.getHand());

@@ -13,7 +13,7 @@ import './css/game.scss';
 const reach = loadStdlib(process.env);
 
 
-const intToOutcome = ['Bob wins!', 'Draw!', 'Alice wins!'];
+const OutCome = ['Bob wins!', 'Draw!', 'Alice wins!'];
 const {standardUnit} = reach;
 const defaults = {defaultFundAmt: '12', defaultWager: '3', standardUnit};
 

@@ -21,13 +21,13 @@ const Bob =
 //  init();
 
   Alice.only(() => {
-    const handAlice = declassify(interact.getStep());
+    const handAlice = declassify(interact.getSt());
   });
   Alice.publish(handAlice);
   commit();
 
   Bob.only(() => {
-    const handBob = declassify(interact.getStep());
+    const handBob = declassify(interact.getSt());
   });
   Bob.publish(handBob);
   commit();

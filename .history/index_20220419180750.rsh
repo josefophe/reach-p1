@@ -1,10 +1,9 @@
 'reach 0.1';
 
-const Player = { 
-  ...hasRandom,
-  getStep: Fun([], UInt),
+const Player = {
+  getHand: Fun([], UInt),
   seeOutcome: Fun([UInt], Null),
-  informTimeout: Fun([], Null)
+
 };
 
 export const main = Reach.App(() => {
@@ -21,18 +20,18 @@ const Bob =
 //  init();
 
   Alice.only(() => {
-    const handAlice = declassify(interact.getStep());
+    const handAlice = declassify(interact.getHand());
   });
   Alice.publish(handAlice);
   commit();
 
   Bob.only(() => {
-    const handBob = declassify(interact.getStep());
+    const handBob = declassify(interact.getHand());
   });
   Bob.publish(handBob);
   commit();
 
-  /*Rex.only(() => {
+  Rex.only(() => {
     const handRex = declassify(interact.getHand());
   });
   Rex.publish(handRex);*/

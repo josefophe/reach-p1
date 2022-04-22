@@ -1,10 +1,10 @@
 {
   "name": "hidden-traitor",
   "version": "1.0.0",
-  "description": "Reach Hackathon",
+  "description": "Reach hackathon",
   "main": "index.js",
   "scripts": {
-    "start": ""
+    "start:
   },
   "repository": {
     "type": "git",

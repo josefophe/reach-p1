@@ -13,7 +13,7 @@ import './css/game.scss';
 const reach = loadStdlib(process.env);
 
 
-const intToOutcome = ['Bob wins!', 'Draw!', 'Alice wins!'];
+const OutCome = ['Bob wins!', 'Draw!', 'Alice wins!'];
 const {standardUnit} = reach;
 const defaults = {defaultFundAmt: '12', defaultWager: '3', standardUnit};
 
@@ -68,7 +68,7 @@ class Player extends React.Component {
       const winner=parseInt(i);
       const pa=parseInt(j);
       const pb=parseInt(k);
-      this.setState({view: 'Done', outcome: intToOutcome[winner],pa: pa,pb: pb}); 
+      this.setState({view: 'Done', outcome: intToome[winner],pa: pa,pb: pb}); 
     }
     informTimeout() { this.setState({view: 'Timeout'}); }
     rollDice(i) { this.state.resolveStep(i ? 1:0); }   

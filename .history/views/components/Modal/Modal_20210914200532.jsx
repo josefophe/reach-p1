@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import posed from "framer-motion";
+import posed from "react-pose";
 
 function useOnClickOutside(ref, handler) {
   useEffect(() => {

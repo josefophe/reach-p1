@@ -54,13 +54,13 @@ exports.FundAccount = class extends React.Component {
             </div>
         </div>*/}
         <Layout>
-          <Button link={'/join'} text={'Join game'} color={'#61ca70'}/>
-          <Button link={'/create'} text={'Create game'} color={'#f0b448'}/>
-          <button className={s.gameRules} onClick={() => toggleModal(true)}>Game Rules</button>
-          <Modal isOpen={isModalOpen} toggle={toggleModal}>
-              <GameRules/>
-              <button className={rule.modal_button} onClick={() => toggleModal(false)}>Confirm</button>
-          </Modal>
+                <Button link={'/join'} text={'Join game'} color={'#61ca70'}/>
+                <Button link={'/create'} text={'Create game'} color={'#f0b448'}/>
+                <button className={s.gameRules} onClick={() => toggleModal(true)}>Game Rules</button>
+                <Modal isOpen={isModalOpen} toggle={toggleModal}>
+                    <GameRules/>
+                    <button className={s.modal_button} onClick={() => toggleModal(false)}>Confirm</button>
+                </Modal>
         </Layout>
         Balance: {bal} {standardUnit}
         <hr />

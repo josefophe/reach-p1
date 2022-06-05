@@ -3,7 +3,7 @@ import { Layout } from './components/layout/Layout';
 import { Button } from './components/Button/Button';
 import { GameRules } from './components/GameRules/GameRules';
 import Modal from "./components/Modal/Modal";
-import rule from "./css/game.scss";
+import rule from "../css/game.scss";
 
 const exports = {};
 
@@ -59,7 +59,7 @@ exports.FundAccount = class extends React.Component {
           <button className={s.gameRules} onClick={() => toggleModal(true)}>Game Rules</button>
           <Modal isOpen={isModalOpen} toggle={toggleModal}>
               <GameRules/>
-              <button className={rule.modal_button} onClick={() => toggleModal(false)}>Confirm</button>
+              <button className={s.modal_button} onClick={() => toggleModal(false)}>Confirm</button>
           </Modal>
         </Layout>
         Balance: {bal} {standardUnit}

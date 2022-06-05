@@ -1,0 +1,138 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background-color:rgba(0,0,0,0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .headerBox{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    .logoView{
+      width: 20%;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .menuView{
+      width: 60%;
+      display: flex;
+    }
+    .buyView{
+      // width: 20%;
+      display: flex;
+      align-items: center;
+      .account{
+        padding: 4px 8px;
+        font-size: 14px;
+        color: #fff;
+      }
+     
+    }
+  }
+
+}
+.navitem {
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  transition: color 1s;
+  position: relative;
+  margin:0 10px;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.5s;
+    &:after{
+      width: 100%;
+    }
+  }
+  &:after {
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    content: "";
+    height: 1px;
+    left: 0;
+    bottom: 15px;
+    background:var(--title-color);
+    transition: all 0.5s;
+  }
+
+  
+
+  .title {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--title-color);
+  }
+
+    
+  // animation: linePoint 0.5s linear 0.1s 1 normal;
+    
+  //   animation-name: myAnim;
+  
+  //   animation-duration: 2s;
+  //   animation-delay: 500ms;
+  //   animation-iteration-count: 2;
+  
+  //   animation-direction: normal;
+  
+  //   animation-timing-function: ease-in;
+  //   animation-fill-mode: forwards;
+
+
+  // @keyframes linePoint {
+  //   0% {
+  //     width: 0%;
+  //   }
+  //   100% {
+  //     width: 100%;
+  //   }
+  // }
+}
+
+.activeNavitem {
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  transition: color 1s;
+  position: relative;
+  margin:0 10px;
+  color: #00a9eb;
+  &:hover {
+    cursor: pointer;
+    color: hsl(224, 79%, 63%);
+    transition: color 0.5s;
+    &:after{
+      // color: hsl(224, 79%, 63%);
+      // width: 100%;
+      background:hsl(224, 79%, 63%);
+    }
+  }
+  &:after {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    content: "";
+    height: 1px;
+    left: 0;
+    bottom: 15px;
+    background:#00a9eb;
+    transition: all 0.5s;
+  }
+
+  
+
+  .title {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+    
+  }
+    
+}

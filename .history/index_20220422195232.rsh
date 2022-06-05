@@ -1,5 +1,13 @@
 'reach 0.1';
 
+<<<<<<< HEAD
+const Player = { 
+  ...hasRandom,
+  getStep: Fun([], UInt),
+||||||| 51e989c
+const Player = {
+  getHand: Fun([], UInt),
+=======
 const [ isHand, SPY, SWAP, CONFIRM ] = makeEnum(3);
 const [ isOutcome, B_WINS, DRAW, A_WINS ] = makeEnum(3);
 
@@ -20,6 +28,7 @@ forall(UInt, (hand) =>
 const Player = {
   ...hasRandom,
   getHand: Fun([], UInt),
+>>>>>>> 0dd3af03a88753487dec39c83c0ce000479d1239
   seeOutcome: Fun([UInt], Null),
   informTimeout: Fun([], Null),
 };
@@ -52,19 +61,42 @@ export const main = Reach.App(() => {
   };
 
   Alice.only(() => {
+<<<<<<< HEAD
+    const handAlice = declassify(interact.getStep());
+||||||| 51e989c
+    const handAlice = declassify(interact.getHand());
+=======
     const wager = declassify(interact.wager);
     const deadline = declassify(interact.deadline);
+>>>>>>> 0dd3af03a88753487dec39c83c0ce000479d1239
   });
   Alice.publish(wager, deadline)
     .pay(wager);
   commit();
 
   Bob.only(() => {
+<<<<<<< HEAD
+    const handBob = declassify(interact.getStep());
+||||||| 51e989c
+    const handBob = declassify(interact.getHand());
+=======
     interact.acceptWager(wager);
+>>>>>>> 0dd3af03a88753487dec39c83c0ce000479d1239
   });
   Bob.pay(wager)
     .timeout(relativeTime(deadline), () => closeTo(Alice, informTimeout));
 
+<<<<<<< HEAD
+  /*Rex.only(() => {
+    const handRex = declassify(interact.getHand());
+  });
+  Rex.publish(handRex);*/
+||||||| 51e989c
+  Rex.only(() => {
+    const handRex = declassify(interact.getHand());
+  });
+  Rex.publish(handRex);
+=======
   var outcome = DRAW;
   invariant( balance() == 2 * wager && isOutcome(outcome) );
   while ( outcome == DRAW ) {
@@ -94,6 +126,7 @@ export const main = Reach.App(() => {
     Alice.publish(saltAlice, handAlice)
       .timeout(relativeTime(deadline), () => closeTo(Bob, informTimeout));
     checkCommitment(commitAlice, saltAlice, handAlice);
+>>>>>>> 0dd3af03a88753487dec39c83c0ce000479d1239
 
     outcome = winner(handAlice, handBob);
     continue;

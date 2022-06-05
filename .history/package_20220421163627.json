@@ -1,0 +1,22 @@
+{
+  "name": "hidden-traitor",
+  "version": "1.0.0",
+  "description": "Reach Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josefophe/reach-p1.git"
+  },
+  "author": "Joseph Iferi-",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josefophe/reach-p1/issues"
+  },
+  "homepage": "https://github.com/josefophe/reach-p1#readme",
+  "dependencies": {
+    "buffer": "^6.0.3"
+  }
+}
